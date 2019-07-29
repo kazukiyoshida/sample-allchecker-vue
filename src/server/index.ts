@@ -5,12 +5,14 @@ const config = require('../../nuxt.config.ts')
 config.dev = !(process.env.NODE_ENV === 'production')
 
 const hc = require('./hc')
+const training = require('./training')
 
 const app = express()
 
 async function start() {
   // API routing
   app.use('/api', hc)
+  app.use('/api', training)
 
   // Init Nuxt.js
   const nuxt = new Nuxt(config)

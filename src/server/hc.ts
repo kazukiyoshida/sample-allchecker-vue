@@ -1,5 +1,4 @@
 const Express = require('express')
-import { IUserDetail } from '../interfaces/user'
 
 const router = Express.Router()
 
